@@ -1,0 +1,34 @@
+
+<table class="table table-inverse">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>DOB</th>
+          <th>aadhar</th>
+          <th>home area</th>
+          <th>wallet amount</th>
+          <th>remove user</th>
+
+        </tr>
+      </thead>
+
+      <tbody>
+        <% for(var i=0; i < list.length; i++) { %>
+       <tr>
+
+         <td><%= list[i].name %></td>
+         <td><%= list[i].email %></td>
+         <td><%= list[i].dob %></td>
+         <td><%= list[i].aadhar %></td>
+         <td><%= list[i].area %></td>
+         <td><%= list[i].amount %></td>
+         <td><form action="/deleteuser" method="post">
+         <input type="hidden" name="email" id="email" value="<%= list[i].email %>">
+  <input type="submit" value="remove"></form></td>
+
+       </tr>
+    <% } %>
+      </tbody>
+
+    </table>
