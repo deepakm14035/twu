@@ -1,5 +1,5 @@
 Node JS program
-
+Install dependancies-npm install express mongodb body-parser ejs
 
 To run- 
 
